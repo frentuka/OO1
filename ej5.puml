@@ -1,0 +1,53 @@
+@startuml
+class site.ftka.InversionPlazoFijo {
+- LocalDate fechaInicio
+- double montoDepositado
+- float porcentajeInteresDiario
++ LocalDate getFechaInicio()
++ double getMontoDepositado()
++ float getPorcentajeInteresDiario()
++ void setFechaInicio(LocalDate)
++ void setMontoDepositado(double)
++ void setPorcentajeInteresDiario(float)
++ double getValorActual()
+}
+
+class site.ftka.Accion {
+- String nombre
+- double valorUnitario
++ String getNombre()
++ void setNombre(String)
++ double getValorUnitario()
++ void setValorUnitario(double)
+}
+
+abstract class site.ftka.Inversion {
++ {abstract}double getValorActual()
+}
+
+class site.ftka.Inversor {
+- List<Inversion> inversiones
++ void agregarInversion(InversionAcciones)
++ void agregarInversion(InversionPlazoFijo)
++ double getTotalInvertido()
+}
+
+class site.ftka.InversionAcciones {
+~ Accion accion
+- int cantidad
++ String getNombreAccion()
++ double getValorUnitario()
++ int getCantidad()
++ void setCantidad(int)
++ Accion getAccion()
++ double getValorActual()
+}
+
+site.ftka.Inversion <|-- site.ftka.InversionPlazoFijo
+site.ftka.Inversion <|-- site.ftka.InversionAcciones
+
+site.ftka.InversionAcciones -> site.ftka.Accion
+
+site.ftka.Inversor -> site.ftka.Inversion
+
+@enduml

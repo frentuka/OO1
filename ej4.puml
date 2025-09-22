@@ -1,0 +1,37 @@
+@startuml
+class site.ftka.Producto {
+~ double pesoEnKilos
+~ String descripcion
++ double getPrecioPorKilo()
++ double getPrecio()
++ double getPeso()
++ String getDescripcion()
++ void setPrecioPorKilo(double)
+}
+
+
+class site.ftka.Ticket {
+~ LocalDate fecha
+~ int cantidadDeProductos
+~ double pesoTotal
++ double impuesto()
++ LocalDate getFecha()
++ double getPrecioTotal()
++ double getPesoTotal()
++ int getCantidadDeProductos()
+}
+
+
+class site.ftka.Balanza {
+~ List<Producto> productos
++ List<Producto> getProductos()
++ void ponerEnCero()
++ void agregarProducto(Producto)
++ Ticket emitirTicket()
++ double getPesoTotal()
++ double getPrecioTotal()
++ int getCantidadDeProductos()
+}
+
+
+@enduml

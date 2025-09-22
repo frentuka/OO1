@@ -1,0 +1,24 @@
+@startuml
+class site.ftka.Item {
+~ String detalle
+~ int cantidad
+~ double costoUnitario
++ double costo()
++ double getCostoUnitario()
++ int getCantidad()
++ String getDetalle()
+}
+
+
+class site.ftka.Presupuesto {
+~ LocalDate fecha
+~ String cliente
+~ List<Item> items
++ void agregarItem(Item)
++ double calcularTotal()
++ LocalDate getFecha()
++ String getCliente()
+}
+
+
+@enduml

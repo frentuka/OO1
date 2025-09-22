@@ -1,0 +1,56 @@
+@startuml
+class site.ftka.Usuario {
+- String nombre
+- Domicilio domicilio
+- List<Consumo> consumos
++ List<Consumo> getConsumos()
++ void registrarConsumo(Consumo)
++ String getNombre()
++ Domicilio getDomicilio()
++ Factura emitirFactura(CuadroTarifario)
+}
+
+class site.ftka.Usuario$Domicilio {
+~ String pais, provincia, ciudad, calle, departamento
+~ int alturaCalle, codigoPostal
+}
+
+class site.ftka.Factura {
+- Usuario usuario
+- Consumo consumo
+- LocalDate fechaEmision
+- CuadroTarifario cuadroTarifario
+- double bonificacion
+- double montoFinal
++ Usuario getUsuario()
++ Consumo getConsumo()
++ LocalDate getFechaEmision()
++ CuadroTarifario getCuadroTarifario()
++ double getBonificacion()
++ double getMontoFinal()
+}
+
+class site.ftka.CuadroTarifario {
+- double precio_kWh
++ double getPrecio_kWh()
++ double getPrecio_kVArh()
++ void setPrecio_kWh(double)
++ void setPrecio_kVArh(double)
+}
+
+class site.ftka.Consumo {
+- double kWh, kVArh
++ double getkWh()
++ double getkVArh()
++ void setkWh(double)
++ void setkVArh(double)
+}
+
+site.ftka.Usuario +.. site.ftka.Usuario$Domicilio
+
+Factura -> CuadroTarifario
+Usuario -> Factura
+Consumo -> Factura
+Consumo -> Usuario
+
+@enduml
