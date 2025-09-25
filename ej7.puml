@@ -1,0 +1,44 @@
+@startuml
+
+class site.ftka.Circulo {
+- double radio
++ double getDiametro()
++ void setDiametro()
++ double getRadio()
++ void setRadio(double)
++ double getPerimetro()
++ double getArea()
+}
+
+
+class site.ftka.Cuerpo3D {
+- double altura
+- Figura2D caraBasal
++ double getAltura()
++ void setAltura(double)
++ Figura2D getCaraBasal()
++ void setCaraBasal(Figura2D)
++ double getVolumen()
++ double getSuperficieExterior()
+}
+
+
+abstract class site.ftka.Figura2D {
++ {abstract}double getPerimetro()
++ {abstract}double getArea()
+}
+
+class site.ftka.Cuadrado {
+- double lado
++ double getLado()
++ void setLado(double)
++ double getPerimetro()
++ double getArea()
++ double getDiagonal()
+}
+
+Cuerpo3D --> Figura2D
+
+site.ftka.Figura2D <|-- site.ftka.Circulo
+site.ftka.Figura2D <|-- site.ftka.Cuadrado
+@enduml

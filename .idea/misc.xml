@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="f1e60c8d-7ac8-4de1-a061-956ff107c9a3" />
-  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -14,6 +11,10 @@
         <option value="$PROJECT_DIR$/ejercicio5/pom.xml" />
         <option value="$PROJECT_DIR$/ejercicio6/pom.xml" />
         <option value="$PROJECT_DIR$/ejercicio7/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio8/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio9/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio10/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio11/pom.xml" />
       </list>
     </option>
   </component>

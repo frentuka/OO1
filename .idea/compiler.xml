@@ -8,10 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ejercicio3" />
         <module name="ejercicio4" />
+        <module name="ejercicio11" />
         <module name="ejercicio2" />
+        <module name="ejercicio10" />
         <module name="ejercicio7" />
+        <module name="ejercicio8" />
         <module name="ejercicio5" />
         <module name="ejercicio6" />
+        <module name="ejercicio9" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
