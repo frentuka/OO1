@@ -15,7 +15,17 @@
         <option value="$PROJECT_DIR$/ejercicio9/pom.xml" />
         <option value="$PROJECT_DIR$/ejercicio10/pom.xml" />
         <option value="$PROJECT_DIR$/ejercicio11/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio12/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio14/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio13/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio15/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/ejercicio2/ejercicio13/pom.xml" />
+        <option value="$PROJECT_DIR$/ejercicio3/ejercicio15/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">

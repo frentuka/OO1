@@ -4,7 +4,7 @@
   <groupId>site.ftka</groupId>
   <artifactId>ejercicio3</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
   <name>ejercicio3-objetos</name>
   <description>Este arquetipo es usado para objetos I y II</description>
 
@@ -22,8 +22,11 @@
       <email>gabriela.perez@gmail.com</email>
     </developer>
   </developers>
+    <modules>
+        <module>ejercicio15</module>
+    </modules>
 
-  <properties>
+    <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
