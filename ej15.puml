@@ -1,0 +1,48 @@
+@startuml
+class site.ftka.Email {
+- String titulo
+- String cuerpo
+- List<Archivo> archivos
++ String getTitulo()
++ String getCuerpo()
++ List<Archivo> adjuntos()
++ int getTamano()
+}
+
+
+class site.ftka.Carpeta {
+- String nombre
+- List<Email> emails
++ String getNombre()
++ List<Email> getEmails()
++ void agregarEmail(Email)
++ void eliimnarEmail(Email)
++ void mover(Email,Carpeta)
++ int getTamano()
+}
+
+
+class site.ftka.Archivo {
+- String nombre
++ String getNombre()
++ int getTamano()
+}
+
+
+class site.ftka.ClienteDeCorreo {
+- Carpeta inbox
+- List<Carpeta> carpetas
++ Carpeta getInbox()
++ Carpeta getCarpeta(String)
++ int espacioOcupado()
+}
+
+ClienteDeCorreo --> Carpeta : inbox
+ClienteDeCorreo --> Carpeta : 0..*
+
+Carpeta --> Email : 0..*
+
+Email --> Archivo : 0..*
+
+
+@enduml

@@ -12,12 +12,15 @@
         <module name="ejercicio11" />
         <module name="ejercicio10" />
         <module name="ejercicio7" />
+        <module name="ejercicio17" />
         <module name="ejercicio8" />
+        <module name="ejercicio16" />
         <module name="ejercicio5" />
         <module name="ejercicio15" />
         <module name="ejercicio6" />
         <module name="ejercicio14" />
         <module name="ejercicio9" />
+        <module name="ejercicio18" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

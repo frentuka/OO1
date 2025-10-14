@@ -22,10 +22,6 @@
       <email>gabriela.perez@gmail.com</email>
     </developer>
   </developers>
-    <modules>
-        <module>ejercicio13</module>
-    </modules>
-
     <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>11</maven.compiler.source>
