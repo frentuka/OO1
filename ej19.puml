@@ -1,0 +1,83 @@
+@startuml
+class site.ftka.oobnb.Usuario {
+- String nombre
+- Direccion direccion
+- int dni
+- List<Propiedad> propiedades
++ String getNombre()
++ Direccion getDireccion()
++ int getDNI()
++ boolean registrarPropiedad(Propiedad)
++ double calcularIngresos(DateLapse)
+}
+
+
+class site.ftka.oobnb.Propiedad {
+- String nombre
+- Direccion direccion
+- double precio
+- List<Reserva> reservasPendientes
+- List<Reserva> reservasTotales
++ String getNombre()
++ Direccion getDireccion()
++ double getPrecio()
++ List<Reserva> getReservasPendientes()
++ void setNombre(String)
++ void setDireccion(Direccion)
++ void setPrecio(double)
++ boolean estaDisponible(DateLapse)
++ double calcularPrecio(Reserva)
++ Reserva reservar(Usuario,DateLapse)
++ boolean cancelar_reserva(LocalDate,Reserva)
++ double calcularIngresos(DateLapse)
+}
+
+
+class site.ftka.oobnb.DateLapse {
+- LocalDate from
+- int sizeInDays
++ LocalDate getFrom()
++ LocalDate getTo()
++ int sizeInDays()
++ boolean includesDate(LocalDate)
++ boolean overlaps(DateLapse)
+}
+
+
+class site.ftka.oobnb.Direccion {
+- String pais
+- String provincia
+- String ciudad
+- String calle
+- String departamento
+- int codigo_postal
+- int altura
++ String getPais()
++ String getProvincia()
++ String getCiudad()
++ String getCalle()
++ String getDepartamento()
++ int getCodigo_postal()
++ int getAltura()
+}
+
+
+class site.ftka.oobnb.Reserva {
+- Usuario usuario
+- DateLapse periodo
++ Usuario getUsuario()
++ DateLapse getPeriodo()
++ double estimarPrecio(double)
+}
+
+Propiedad -> Reserva : 0..n
+Propiedad -> Direccion
+
+Reserva -> DateLapse
+
+Usuario -> Direccion
+Usuario -> Propiedad : 0..n
+
+
+
+@enduml
